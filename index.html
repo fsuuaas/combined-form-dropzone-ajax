@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="combine normal form with dropzone, dropzone upload on submit, dropzone with other form fields, dropzone processqueue on form
+    submit, upload image using ajax in php example">
+    <meta name="keywords" content="combine normal form with dropzone, dropzone upload on submit, dropzone with other form fields, dropzone processqueue on form
+    submit, upload image using ajax in php example">
+    <title>Ajax Image Upload Using Dropzone.js with Normal Form Fields On Button Click Using PHP</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/dropzone.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-custom">
+            <a class="navbar-brand ">
+                <div class="logo-container">
+                    
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" target="_blank">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" target="_blank">Demo</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-container">
+                        <h1 class="text-center">Combine Normal Form with Dropzone.js & Upload on Submit Using Ajax and PHP</h1>
+                        <form id="imageUploadForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" name="name" id="name" aria-describedby="name" placeholder="Enter Name">
+                                <small class="form-text"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                <small class="form-text"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile">Mobile</label>
+                                <input type="text" class="form-control" name="mobile" id="mobile" aria-describedby="mobile" placeholder="Enter mobile">
+                                <small class="form-text"></small>
+                            </div>
+                            <div id="imageUpload" class="dropzone"></div>
+                            <button id="uploaderBtn" type="button" class="btn btn-primary">Save</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!--- Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Thank You!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i id="success-icon"  class="fas fa-thumbs-up"></i>
+                        <div id="success-text">
+                        </div> 
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- Modal -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/dropzone.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
